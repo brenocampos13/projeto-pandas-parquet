@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_json():
+def processed_users():
     
     df = pd.read_json(
         rf"C:\Users\Breno\Desktop\New folder\ANALISTA DE DADOS\Projeto_Pandas\data\raw\raw_users.json"
@@ -36,4 +36,4 @@ def load_json():
     )
 
 if __name__ == "__main__":
-    load_json()
+    processed_users()

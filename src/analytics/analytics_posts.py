@@ -57,7 +57,7 @@ def analytics_posts(df):
 
     total_comentarios = comentarios_por_usuario.to_frame()
     total_comentarios = total_comentarios.reset_index()
-    
+
     total_posts = posts_por_usuarios.to_frame()
     total_posts = total_posts.reset_index()
 
@@ -110,10 +110,14 @@ def save_and_read_to_parquet_analytics(df1, df2):
     print(dataframe2.shape)
     print(dataframe2.dtypes)
 
-if __name__ == "__main__":
+def analytics():
     
     df = merges()
 
     dataframe1, dataframe2 = analytics_posts(df)
 
     save_and_read_to_parquet_analytics(dataframe1, dataframe2)
+
+if __name__ == "__main__":
+
+    analytics()
